@@ -4,10 +4,17 @@ import PackageDescription
 
 let package = Package(
     name: "Google IAP Challenge Handler",
+    platforms: [
+        .macOS(.v10_12),
+    ],
     products: [
         .library(
             name: "GoogleIAPChallengeHandler",
             targets: ["GoogleIAPChallengeHandler"]
+        ),
+        .executable(
+            name: "Demo",
+            targets: ["Demo"]
         ),
     ],
     dependencies: [],
@@ -18,6 +25,10 @@ let package = Package(
         ),
         .testTarget(
             name: "GoogleIAPChallengeHandlerTests",
+            dependencies: ["GoogleIAPChallengeHandler"]
+        ),
+        .target(
+            name: "Demo",
             dependencies: ["GoogleIAPChallengeHandler"]
         ),
     ]

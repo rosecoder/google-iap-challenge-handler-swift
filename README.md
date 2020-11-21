@@ -1,3 +1,3 @@
 # Google IAP Challenge Handler
 
-A description of this package.
+This package is just for testing. Do not use in production.
